@@ -1,28 +1,14 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ include file="../inc/db.jsp"%>
+<%@page import="com.demo.javabean.UserBean"%>
+<%@ page pageEncoding="UTF-8"%>
 <%
 response.setContentType("text/xml");
 response.setHeader("Cache-Control","no-cache");
 String username = request.getParameter("username");
 
-boolean isValid = false;
-String sql = "select * from user where username='"+username+"'";
-try {
-	Class.forName(drv).newInstance();
-	Connection conn = DriverManager.getConnection(url, usr, pwd);
-	Statement stm = conn.createStatement();
-	ResultSet rs = stm.executeQuery(sql);
-	if(rs.next())isValid = true;
-	rs.close();
-	stm.close();
-	conn.close();
-} catch (Exception e) {
-	e.printStackTrace();
-	out.println(e);
-} finally {
-}
+UserBean userBean = new UserBean();
+boolean isExist = userBean.isExist(username);
 
-if(isValid) {
+if(isExist) {
 	out.println("<content>该用户名已经存在！</content>");
 
 }else{
