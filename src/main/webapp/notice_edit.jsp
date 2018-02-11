@@ -58,11 +58,11 @@ function validNoticeEdit(theform) {
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：公司公告&gt;&gt;修改公告</TD>
-				<TD align="right"><a href="action/notice.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回公司公告主页面</a></TD>
+				<TD align="right"><a href="notice.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回公司公告主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/notice.jsp?method=update" method="post" onsubmit="return validNoticeEdit(this);">
+		<form name="form1" action="notice.do?method=update" method="post" onsubmit="return validNoticeEdit(this);">
 		<input type="hidden" name="id" value="<%=request.getAttribute("id") %>">
 		<input type="hidden" name="pageSize" value="<%=pageSize%>">
 		<input type="hidden" name="pageNo" value="<%=pageNo%>">

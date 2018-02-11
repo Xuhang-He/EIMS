@@ -4,4 +4,106 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.demo.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.demo.servlet.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AjaxServlet</servlet-name>
+    <servlet-class>com.demo.servlet.AjaxServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.demo.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>AddressServlet</servlet-name>
+    <servlet-class>com.demo.servlet.AddressServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SmsServlet</servlet-name>
+    <servlet-class>com.demo.servlet.SmsServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>ScheduleServlet</servlet-name>
+    <servlet-class>com.demo.servlet.ScheduleServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>WorklogServlet</servlet-name>
+    <servlet-class>com.demo.servlet.WorklogServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>NoticeServlet</servlet-name>
+    <servlet-class>com.demo.servlet.NoticeServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MeetingServlet</servlet-name>
+    <servlet-class>com.demo.servlet.MeetingServlet</servlet-class>
+  </servlet>
+
+  <!--mapping-->
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AjaxServlet</servlet-name>
+    <url-pattern>/ajax.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>AddressServlet</servlet-name>
+    <url-pattern>/address.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SmsServlet</servlet-name>
+    <url-pattern>/sms.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ScheduleServlet</servlet-name>
+    <url-pattern>/schedule.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>WorklogServlet</servlet-name>
+    <url-pattern>/worklog.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>NoticeServlet</servlet-name>
+    <url-pattern>/notice.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>MeetingServlet</servlet-name>
+    <url-pattern>/meeting.do</url-pattern>
+  </servlet-mapping>
 </web-app>

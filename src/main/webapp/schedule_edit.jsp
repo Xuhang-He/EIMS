@@ -74,11 +74,11 @@ function validScheduleEdit(theform) {
 			<TR>
 				<TD>当前位置：日程安排&gt;&gt;修改日程安排</TD>
 				<TD align="right"><a
-					href="action/schedule.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回日程安排主页面</a></TD>
+					href="schedule.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回日程安排主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/schedule.jsp?method=update"
+		<form name="form1" action="schedule.do?method=update"
 			method="post" onsubmit="return validScheduleEdit(this);"><input
 			type="hidden" name="id" value="<%=request.getAttribute("id") %>">
 		<input type="hidden" name="pageSize" value="<%=pageSize%>"> <input

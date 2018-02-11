@@ -52,7 +52,7 @@
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：工作记录</TD>
-				<TD align="right"><a href="action/worklog.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增工作记录</a></TD>
+				<TD align="right"><a href="worklog.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增工作记录</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -84,9 +84,9 @@
 				<TD><%=hash.get("description")%></TD>
 				<TD><%=hash.get("logtime")%></TD>
 				<TD><a
-					href='action/worklog.jsp?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
+					href='worklog.do?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
 				<a
-					href="action/worklog.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href="worklog.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
 			</TR>
 			<%
 				}
@@ -94,7 +94,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/worklog.jsp?method=list"
+		<form name="form1" action="worklog.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>

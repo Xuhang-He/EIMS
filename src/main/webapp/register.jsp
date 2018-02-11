@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -21,81 +21,82 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<script language="javascript">
-function validRegister(theform) {
-	var username = theform.username.value;
-	var password1 = theform.password1.value;
-	var password2 = theform.password2.value;
-	var email = theform.password2.value;
-	if (username == "") {
-	    alert("用户名不能为空！");
-		return false;
-	}
-	if (password1 == "") {
-	    alert("密码不能为空！");
-		return false;
-	}
-	if (password1 != password2) {
-	    alert("两个密码不相等！");
-		return false;
-	}
-	return true;
-}
-</script>
-<script>
+	<script language="javascript" type="application/javascript">
 
-	//设一个变量
-	var XMLHttpReq=false;
-	
-	//创建一个XMLHttpRequest对象
-	function createXMLHttpRequest(){
-		if(window.XMLHttpRequest){ //Mozilla 
-				XMLHttpReq=new XMLHttpRequest();
-		}
-		else if(window.ActiveXObject){
-			try{
-				XMLHttpReq=new ActiveXObject("Msxml2.XMLHTTP");
-			}catch(e){
-				try{
-					XMLHttpReq=new ActiveXObject("Microsoft.XMLHTTP");
-				}catch(e){}
-			}
-		}
-	}
-	//发送请求函数
-	function send(url){
-		createXMLHttpRequest();
-		XMLHttpReq.open("GET",url,true);
-		XMLHttpReq.onreadystatechange=parse;   //指定响应的函数
-		XMLHttpReq.send(null);  //发送请求
-	}
-	function parse(){
-		if(XMLHttpReq.readyState==4){ //对象状态
-			if(XMLHttpReq.status==200){//信息已成功返回，开始处理信息
-				var res = XMLHttpReq.responseXML.getElementsByTagName("content")[0].firstChild.data;				
-				if (res == "ok") {
-					document.getElementById("status").innerHTML="该用户名可以使用！";
-				} else {
-					document.getElementById("status").innerHTML=res;
-					window.alert(res);
-				}
-			}else{
-				window.alert("所请求的页面有异常");
-			}
-		}
-	}
-	//身份验证 
-	function checkUsername(){
-		var username = document.getElementById("username").value;
-			
-		if(username == ""){
-			alert("请输入用户名！");
+        //设一个变量
+        var XMLHttpReq=false;
+
+        //创建一个XMLHttpRequest对象
+        function createXMLHttpRequest(){
+            if(window.XMLHttpRequest){ //Mozilla
+                XMLHttpReq=new XMLHttpRequest();
+            }
+            else if(window.ActiveXObject){
+                try{
+                    XMLHttpReq=new ActiveXObject("Msxml2.XMLHTTP");
+                }catch(e){
+                    try{
+                        XMLHttpReq=new ActiveXObject("Microsoft.XMLHTTP");
+                    }catch(e){}
+                }
+            }
+        }
+        //发送请求函数
+        function send(url){
+            createXMLHttpRequest();
+            XMLHttpReq.open("GET",url,true);
+            XMLHttpReq.onreadystatechange=parse;   //指定响应的函数
+            XMLHttpReq.send(null);  //发送请求
+        }
+        function parse(){
+            if(XMLHttpReq.readyState==4){ //对象状态
+                if(XMLHttpReq.status==200){//信息已成功返回，开始处理信息
+                    var res = XMLHttpReq.responseXML.getElementsByTagName("content")[0].firstChild.data;
+                    if (res == "ok") {
+                        document.getElementById("status").innerHTML="该用户名可以使用！";
+                    } else {
+                        document.getElementById("status").innerHTML=res;
+                        window.alert(res);
+                    }
+                }else{
+                    window.alert("所请求的页面有异常");
+                }
+            }
+        }
+        //身份验证
+        function checkUsername(){
+            var username = document.getElementById("username").value;
+            if(username == ""){
+                alert("请输入用户名！");
+                return false;
+            } else{
+                send('ajax.do?username='+username);
+            }
+            return true;
+        }
+	</script>
+	<script language="javascript" type="application/javascript">
+	function validRegister(theform) {
+		var username = theform.username.value;
+		var password1 = theform.password1.value;
+		var password2 = theform.password2.value;
+		if (username == "") {
+			alert("用户名不能为空！");
 			return false;
-		} else{
-			send('action/checkUsername.jsp?username='+username);
 		}
+		if (password1 == "") {
+			alert("密码不能为空！");
+			return false;
+		}
+		if (password1 != password2) {
+			alert("两个密码不相等！");
+			return false;
+		}
+		return true;
 	}
-</script>
+	</script>
+
+
 </head>
 
 <body bgcolor="#52BDFE">
@@ -107,7 +108,7 @@ function validRegister(theform) {
 			<tr>
 				<td width="60%"></td>
 				<td>
-				<form name="form1" action="action/register.jsp" method="post"
+				<form name="form1" action="register.do" method="post"
 					onsubmit="return validRegister(this);">
 				<table width="200" border="0">
 					<tr>
@@ -116,16 +117,15 @@ function validRegister(theform) {
 						</td>
 					<tr>
 						<td>*用户名</td>
-						<td><input type="text" name="username" size="10"
-							onblur="checkUsername();"></td>
+						<td><input type="text" id="username" name="username" size="10" onblur="checkUsername()" ></td>
 					</tr>
 					<tr>
 						<td>*密码</td>
-						<td><input type="password" name="password1" size="10"></td>
+						<td><input type="password" id="password1" name="password1" size="10"></td>
 					</tr>
 					<tr>
 						<td>*确认密码</td>
-						<td><input type="password" name="password2" size="10"></td>
+						<td><input type="password" id="password2" name="password2" size="10"></td>
 					</tr>
 					<tr>
 						<td>Email</td>
@@ -144,5 +144,8 @@ function validRegister(theform) {
 	</tr>
 </table>
 
+
+
 </body>
 </html>
+

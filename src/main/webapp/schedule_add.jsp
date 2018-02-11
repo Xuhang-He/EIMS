@@ -74,11 +74,11 @@ function validScheduleAdd(theform) {
 			<TR>
 				<TD>当前位置：日程安排&gt;&gt;新增日程安排</TD>
 				<TD align="right"><a
-					href="action/schedule.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回日程安排主页面</a></TD>
+					href="schedule.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回日程安排主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/schedule.jsp?method=insert"
+		<form name="form1" action="schedule.do?method=insert"
 			method="post" onsubmit="return validScheduleAdd(this);"><input
 			type="hidden" name="pageSize" value="<%=pageSize%>"> <input
 			type="hidden" name="pageNo" value="<%=pageNo%>">

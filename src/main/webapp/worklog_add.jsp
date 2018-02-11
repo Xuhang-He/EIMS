@@ -74,11 +74,11 @@ function validWorklogAdd(theform) {
 			<TR>
 				<TD>当前位置：工作记录&gt;&gt;新增工作记录</TD>
 				<TD align="right"><a
-					href="action/worklog.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作记录主页面</a></TD>
+					href="worklog.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作记录主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/worklog.jsp?method=insert"
+		<form name="form1" action="worklog.do?method=insert"
 			method="post" onsubmit="return validWorklogAdd(this);"><input
 			type="hidden" name="pageSize" value="<%=pageSize%>"> <input
 			type="hidden" name="pageNo" value="<%=pageNo%>">

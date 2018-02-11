@@ -1,17 +1,22 @@
 package com.demo.javabean;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+@Getter
+@Setter
 public class DBAccess {
 	
-	private String drv = "org.gjt.mm.mysql.Driver";
-	private String url = "jdbc:mysql://localhost:3306/infor_manage_sys";
-	private String usr = "root";
-	private String pwd = "123";
+	public static String drv = "org.gjt.mm.mysql.Driver";
+	public static String url = "jdbc:mysql://localhost:3306/infor_manage_sys";
+	public static String usr = "root";
+	public static String pwd = "123";
 	
 	private Connection conn = null;
 	private Statement stm = null;
@@ -93,61 +98,5 @@ public class DBAccess {
 				rs.close();
 		} catch (SQLException e) {
 		}
-	}
-
-	public String getDrv() {
-		return drv;
-	}
-
-	public void setDrv(String drv) {
-		this.drv = drv;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getUsr() {
-		return usr;
-	}
-
-	public void setUsr(String usr) {
-		this.usr = usr;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
-
-	public Connection getConn() {
-		return conn;
-	}
-
-	public void setConn(Connection conn) {
-		this.conn = conn;
-	}
-
-	public Statement getStm() {
-		return stm;
-	}
-
-	public void setStm(Statement stm) {
-		this.stm = stm;
-	}
-
-	public ResultSet getRs() {
-		return rs;
-	}
-
-	public void setRs(ResultSet rs) {
-		this.rs = rs;
 	}
 }

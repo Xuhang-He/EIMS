@@ -52,7 +52,7 @@
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：短消息管理</TD>
-				<TD align="right"><a href="action/sms.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">发送消息</a></TD>
+				<TD align="right"><a href="sms.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">发送消息</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -80,9 +80,9 @@
 				<TD><%=hash.get("username")%></TD>
 				<TD><%=hash.get("isRead")%></TD>
 				<TD><a
-					href='action/sms.jsp?method=read&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>设置已读</a>
+					href='sms.do?method=read&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>设置已读</a>
 				<a
-					href="action/sms.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href="sms.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
 			</TR>
 			<%
 				}
@@ -92,7 +92,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/sms.jsp?method=list"
+		<form name="form1" action="sms.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>

@@ -68,11 +68,11 @@ function validAddressAdd(theform) {
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：通讯录管理&gt;&gt;新增联系人</TD>
-				<TD align="right"><a href="action/address.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回通讯录主页面</a></TD>
+				<TD align="right"><a href="address.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回通讯录主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/address.jsp?method=insert" method="post"
+		<form name="form1" action="address.do?method=insert" method="post"
 			onsubmit="return validAddressAdd(this);">
 		<input type="hidden" name="pageSize" value="<%=pageSize%>">
 		<input type="hidden" name="pageNo" value="<%=pageNo%>">

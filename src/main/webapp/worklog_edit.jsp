@@ -74,11 +74,11 @@ function validWorklogEdit(theform) {
 			<TR>
 				<TD>当前位置：工作记录&gt;&gt;修改工作记录</TD>
 				<TD align="right"><a
-					href="action/worklog.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作记录主页面</a></TD>
+					href="worklog.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作记录主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/worklog.jsp?method=update"
+		<form name="form1" action="worklog.do?method=update"
 			method="post" onsubmit="return validWorklogEdit(this);"><input
 			type="hidden" name="id" value="<%=request.getAttribute("id") %>">
 		<input type="hidden" name="pageSize" value="<%=pageSize%>"> <input

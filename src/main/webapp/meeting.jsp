@@ -52,7 +52,7 @@
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：工作会议</TD>
-				<TD align="right"><a href="action/meeting.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增会议</a></TD>
+				<TD align="right"><a href="meeting.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增会议</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -84,9 +84,9 @@
 				<TD><%=hash.get("title")%></TD>
 				<TD><%=hash.get("content")%></TD>
 				<TD><a
-					href='action/meeting.jsp?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
+					href='meeting.do?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
 				<a
-					href="action/meeting.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href="meeting.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
 			</TR>
 			<%
 				}
@@ -96,7 +96,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/meeting.jsp?method=list"
+		<form name="form1" action="meeting.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>

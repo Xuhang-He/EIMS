@@ -52,7 +52,7 @@
 			<TR>
 				<TD>当前位置：通讯录管理</TD>
 				<TD align="right"><a
-					href="action/address.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增联系人</a></TD>
+					href="address.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增联系人</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -88,9 +88,9 @@
 				<TD><%=hash.get("address")%></TD>
 				<TD><%=hash.get("postcode")%></TD>
 				<TD><a
-					href='action/address.jsp?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
+					href='address.do?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
 				<a
-					href="action/address.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href='address.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>删除</a></TD>
 			</TR>
 			<%
 				}
@@ -98,7 +98,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/address.jsp?method=list"
+		<form name="form1" action="address.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>

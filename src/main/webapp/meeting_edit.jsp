@@ -68,11 +68,11 @@ function validMeetingEdit(theform) {
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：工作会议&gt;&gt;修改会议</TD>
-				<TD align="right"><a href="action/meeting.jsp?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作会议主页面</a></TD>
+				<TD align="right"><a href="meeting.do?method=list&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">返回工作会议主页面</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
-		<form name="form1" action="action/meeting.jsp?method=update" method="post" onsubmit="return validMeetingEdit(this);">
+		<form name="form1" action="meeting.do?method=update" method="post" onsubmit="return validMeetingEdit(this);">
 		<input type="hidden" name="id" value="<%=request.getAttribute("id") %>">
 		<input type="hidden" name="pageSize" value="<%=pageSize%>">
 		<input type="hidden" name="pageNo" value="<%=pageNo%>">

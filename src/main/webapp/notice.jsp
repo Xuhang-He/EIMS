@@ -53,7 +53,7 @@
 			<TR>
 				<TD>当前位置：公司公告</TD>
 				<TD align="right"><a
-					href="action/notice.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增公告</a></TD>
+					href="notice.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增公告</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -81,9 +81,9 @@
 				<TD><%=hash.get("content")%></TD>
 				<TD><%=hash.get("sendtime")%></TD>
 				<TD><a
-					href='action/notice.jsp?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
+					href='notice.do?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
 				<a
-					href="action/notice.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href="notice.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
 			</TR>
 			<%
 				}
@@ -93,7 +93,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/notice.jsp?method=list"
+		<form name="form1" action="notice.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>

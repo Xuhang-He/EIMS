@@ -46,7 +46,7 @@ function validLogin(theform) {
 			<tr>
 				<td width="60%"></td>
 				<td>
-				<form name="form1" action="action/login.jsp" method="post"
+				<form name="form1" action="login.do" method="post"
 					onsubmit="return validLogin(this);">
 				<table>
 					<tr>

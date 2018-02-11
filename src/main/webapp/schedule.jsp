@@ -52,7 +52,7 @@
 		<TABLE width="100%" class="position">
 			<TR>
 				<TD>当前位置：日程安排</TD>
-				<TD align="right"><a href="action/schedule.jsp?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增日程安排</a></TD>
+				<TD align="right"><a href="schedule.do?method=add&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">新增日程安排</a></TD>
 				<TD width="20"></TD>
 			</TR>
 		</TABLE>
@@ -80,9 +80,9 @@
 				<TD><%=hash.get("day")%></TD>
 				<TD><%=hash.get("plan")%></TD>
 				<TD><a
-					href='action/schedule.jsp?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
+					href='schedule.do?method=edit&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>'>修改</a>
 				<a
-					href="action/schedule.jsp?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
+					href="schedule.do?method=delete&id=<%=id %>&pageSize=<%=pageSize%>&pageNo=<%=pageNo%>">删除</a></TD>
 			</TR>
 			<%
 				}
@@ -92,7 +92,7 @@
 		</TABLE>
 
 
-		<form name="form1" action="action/schedule.jsp?method=list"
+		<form name="form1" action="schedule.do?method=list"
 			method="post">
 		<TABLE border="0" width="100%" class="pager">
 			<TR>
